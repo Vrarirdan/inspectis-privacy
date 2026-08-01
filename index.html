@@ -1,112 +1,146 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Privacy Policy - Inspectis</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Habbet official developer website." />
+    <title>Habbet</title>
     <style>
       :root {
-        color-scheme: light;
+        color-scheme: dark;
+        --bg: #0e1b12;
+        --panel: #122116;
+        --panel-2: #18291c;
+        --text: #f3f1e7;
+        --muted: #b9c2b1;
+        --accent: #f4b73c;
+        --line: rgba(244, 183, 60, 0.22);
       }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
       body {
         margin: 0;
-        padding: 2.5rem 1.5rem;
-        background: #f7efe3;
-        color: #2f2f2f;
-        font-family: "Georgia", "Times New Roman", serif;
-        line-height: 1.7;
+        min-height: 100%;
+        background:
+          radial-gradient(circle at top, rgba(244, 183, 60, 0.16), transparent 35%),
+          linear-gradient(180deg, #102013 0%, var(--bg) 100%);
+        color: var(--text);
+        font-family: Arial, Helvetica, sans-serif;
       }
-      main {
-        max-width: 900px;
-        margin: 0 auto;
+
+      body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 32px;
       }
+
+      .card {
+        width: min(720px, 100%);
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(18, 33, 22, 0.96), rgba(11, 20, 13, 0.96));
+        border-radius: 24px;
+        padding: 32px;
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+      }
+
+      .eyebrow {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgba(244, 183, 60, 0.12);
+        color: var(--accent);
+        font-size: 12px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
       h1 {
-        font-size: 2rem;
-        margin: 0 0 0.5rem 0;
+        margin: 0 0 12px;
+        font-size: clamp(36px, 6vw, 60px);
+        line-height: 0.95;
+        letter-spacing: -0.04em;
       }
-      h2 {
-        margin-top: 2rem;
-        font-size: 1.25rem;
+
+      p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.6;
       }
-      ul {
-        padding-left: 1.25rem;
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 24px;
       }
-      .meta {
-        margin-top: 0;
-        color: #4a4a4a;
+
+      .panel {
+        background: linear-gradient(180deg, rgba(24, 41, 28, 0.9), rgba(14, 25, 17, 0.95));
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        padding: 18px;
       }
-      a {
-        color: #1f3d2b;
+
+      .panel h2 {
+        margin: 0 0 8px;
+        font-size: 14px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .panel code {
+        display: block;
+        white-space: pre-wrap;
+        word-break: break-word;
+        color: var(--text);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      @media (max-width: 640px) {
+        body {
+          padding: 20px;
+        }
+
+        .card {
+          padding: 24px;
+          border-radius: 20px;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
   <body>
-    <main>
-      <h1>Privacy Policy for Inspectis</h1>
-      <p class="meta"><strong>Effective Date:</strong> January 18, 2026</p>
-
+    <main class="card">
+      <div class="eyebrow">Official Website</div>
+      <h1>Habbet</h1>
       <p>
-        Inspectis ("we," "our," or "us") respects your privacy. This Privacy Policy
-        explains how information is collected, used, and protected when you use
-        the Inspectis application.
+        Habbet is a habit tracker with a casino-style reward loop. This site exists so app
+        verification and monetization tools can confirm the developer website for the Android app.
       </p>
 
-      <h2>Information We Collect</h2>
-      <p>Inspectis collects only the information necessary to provide its core functionality. This may include:</p>
-      <ul>
-        <li>Inspection and project data entered by the user</li>
-        <li>Photos, notes, and annotations created during inspections</li>
-        <li>Optional profile information such as company name, inspector name, email address, and phone number</li>
-      </ul>
-      <p>Inspectis does not sell, rent, or share personal information with third parties.</p>
+      <div class="grid">
+        <section class="panel">
+          <h2>Support</h2>
+          <code>Public developer website for Habbet.</code>
+        </section>
 
-      <h2>How Information Is Used</h2>
-      <p>
-        Information collected by Inspectis is used solely to create and manage
-        inspection projects, generate reports and exports, and display inspection
-        data within the app. No data is used for advertising, analytics tracking,
-        or marketing purposes.
-      </p>
-
-      <h2>Data Storage</h2>
-      <p>
-        Inspection data is stored locally on the user's device and/or in services
-        explicitly configured by the user. Inspectis does not automatically
-        transmit or store user data on external servers unless initiated by the user.
-      </p>
-
-      <h2>Permissions</h2>
-      <p>Inspectis may request access to the following device features:</p>
-      <ul>
-        <li>Camera - to capture inspection photos</li>
-        <li>Storage - to save and export inspection files</li>
-      </ul>
-      <p>These permissions are used only to support core app functionality.</p>
-
-      <h2>Data Sharing</h2>
-      <p>
-        Inspectis does not share user data with third parties except when required
-        to complete user-initiated actions such as exporting or sharing reports.
-      </p>
-
-      <h2>Data Security</h2>
-      <p>Reasonable measures are taken to protect user data from unauthorized access, alteration, or disclosure.</p>
-
-      <h2>Children's Privacy</h2>
-      <p>
-        Inspectis is not intended for use by children under the age of 13. We do
-        not knowingly collect personal information from children.
-      </p>
-
-      <h2>Changes to This Policy</h2>
-      <p>
-        This Privacy Policy may be updated from time to time. Any changes will be
-        reflected on this page with an updated effective date.
-      </p>
-
-      <h2>Contact Us</h2>
-      <p>If you have any questions about this Privacy Policy, you may contact us at:</p>
-      <p>Email: <a href="mailto:support@inspectis.app">support@inspectis.app</a></p>
+        <section class="panel">
+          <h2>App Ads</h2>
+          <code>app-ads.txt is available at the root of this site.</code>
+        </section>
+      </div>
     </main>
   </body>
 </html>
